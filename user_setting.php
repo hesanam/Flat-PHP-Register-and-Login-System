@@ -13,7 +13,7 @@ if (empty($_POST) == false) {
 	}
 	if (empty($errors)) {
 		if (filter_var($_POST['new_email'] , FILTER_VALIDATE_EMAIL) == false) {
-			$errors[] = 'A valid email address is required.';
+			$errors[] = 'A valid email address is required';
 		}
 		if (email_exists($_POST['new_email'])) {
 			if ($_POST['new_email'] !== $user_data['email']) {
